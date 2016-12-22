@@ -1,0 +1,24 @@
+Jaura Kernel Spesific Design and Initialization Standard (JKSDIS)
+***
+Dokumen ini menentukan bagaimana desain spesifik kernel yang tepat. Desain spe-
+sifik dalam hal ini meliputi:
+- cara compile dan link
+- struktur section dalam file
+Selain itu juga membahas bagaimana proses inisialisasi berlangsung, tepatnya se-
+telah kernel dimuat dalam memori.
+
+A. Cara Compile dan Link
+[TODO]
+
+B. Struktur Section
+Urutan section boleh tidak beraturan, tapi alamat VA masing-masing section harus
+berderetan (contiguous).
+Section BSS direkomendasikan ada di bagian akhir.
+Kernel harus dimuat TEPAT di atas low memory. Rekomendasi low memory 16 MB (0x00000000  - 0x00FFFFFF)
+Kernel harus dimuat di alamat berkelipatan 4MB
+
+C. Inisialisasi
+- Entry point sesegera mungkin memanggil KInit.
+- KInit segera melakukan setup paging dengan KiInitMemoryPaging.
+- Sebelum KiInitMemoryPaging selesai, dilarang mengakses data global manapun.
+

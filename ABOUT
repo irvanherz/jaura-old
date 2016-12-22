@@ -1,0 +1,34 @@
+Dokumentasi Jaura OS
+
+Jaura adalah sebuah proyek pengembangan inovasi di bidang sistem operasi yang telah lama dicetuskan oleh Irvan Hermawan. Jaura tidak terlalu bayak fokus pada pengembangan lingkungan sistem yang user-friendly, akan tetapi saat ini pengembangannya lebih dititikberatkan pada penyediaan lingkungan pemrograman yang mudah dan handal.
+
+Visi Jaura ke depan adalah menciptakan kernel berarsitektur hybrid dengan manajemen driver modular. Dalam prosesnya Jaura telah banyak melakukan perkembangan sedikit demi sedikit untuk mencapai visi tersebut. Meski arsitektur ini berbeda pada kernel pada umumnya, Jaura masih banyak mengikuti tren desain yang diterapkan oleh sebagian besar sistem operasi. Dari keseluruhan sistem operasi, diketahui bahwa hampir semuanya mengikuti desain dari akar perkembangan UNIX, misalnya Linux, Mac OS dan Android. Oleh karena itu, banyak aspek dari Jaura yang serupa dengan prinsip desain yang ada pada UNIX dan sistem berbasis UNIX-like lain.
+
+Coding Style
+============
+Menjaga kode agar tetap rapi dan seragam sama artinya dengan menjaga semangat dalam mengembangkan Jaura. Menetapkan coding style dinilai penting terkait akan hal ini. Berikut coding style yang direkomendasikan dalam penulisan kode.
+
+typedef unsigned long ULONG
+ULONG thisIsVar;
+ULONG moreVar;
+
+typedef struct _STRUCT_NAME {
+	int memberName1;
+	ULONG memberName2;
+} STRUCT_NAME;
+
+STRUCT_NAME structInstance;
+
+ULONG ThisIsAFunction(SOME_CUSTOM_DATA_TYPE dataValue, int val) {
+	while(val) val--;
+	if (someValue < 10) {
+		//write code here
+		//write code here
+		//write code here
+	}
+	if (someValue == 3)
+		return;
+	someValue = GetNewValueFunctionExample();
+}
+
+
